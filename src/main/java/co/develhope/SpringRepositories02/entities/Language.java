@@ -6,6 +6,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * @author Tania Ielpo
+ */
+
 @Entity
 @Table (name="programming_language")
 @Data
@@ -14,14 +18,14 @@ import javax.persistence.*;
 public class Language {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false,updatable = false)
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(nullable = false,updatable = false)
+    @Column(nullable = false)
     private String name;
 
     private String year;
 
-    @Column(nullable = false,updatable = false)
+    @Column(nullable = false)
     private String inventor;
 }
